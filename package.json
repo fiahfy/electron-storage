@@ -1,0 +1,71 @@
+{
+  "name": "@fiahfy/electron-storage",
+  "description": "Helper for using electron-store as storage.",
+  "version": "0.1.7",
+  "author": {
+    "name": "fiahfy",
+    "email": "d.fiahfy@gmail.com",
+    "url": "https://github.com/fiahfy"
+  },
+  "bugs": {
+    "url": "https://github.com/fiahfy/electron-storage/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@fiahfy/biome-config": "0.0.2",
+    "@tsconfig/node20": "20.1.6",
+    "electron": "38.0.0",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.js"
+    },
+    "./preload": {
+      "import": "./dist/preload.js",
+      "types": "./dist/preload.d.js"
+    },
+    "./renderer": {
+      "import": "./dist/renderer.js",
+      "types": "./dist/renderer.d.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/fiahfy/electron-storage",
+  "keywords": [
+    "electron"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "packageManager": "yarn@4.10.3",
+  "peerDependencies": {
+    "electron": ">=27"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiahfy/electron-storage.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "lint": "biome check",
+    "test": "yarn lint && yarn type-check && vitest run",
+    "type-check": "tsc"
+  },
+  "type": "module",
+  "types": "./dist/index.d.js",
+  "dependencies": {
+    "electron-store": "11.0.0"
+  }
+}
