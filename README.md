@@ -14,9 +14,11 @@ npm install @fiahfy/electron-storage
 
 ```js
 // main.js
-import { register } from '@fiahfy/electron-storage'
+import { createStore, register } from '@fiahfy/electron-storage'
 
-const { store } = register()
+const store = createStore()
+
+register(store)
 ```
 
 ```js

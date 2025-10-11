@@ -3,8 +3,10 @@ import Store from 'electron-store'
 
 const prefix = 'electron-storage.'
 
-export const register = () => {
-  const store = new Store()
+export const createStore = () => new Store()
+
+export const register = (initialStore?: Store) => {
+  const store = initialStore ?? createStore()
 
   store.onDidAnyChange((newValue, oldValue) => {
     const windows = BrowserWindow.getAllWindows()
@@ -24,8 +26,4 @@ export const register = () => {
   ipcMain.handle(`${prefix}delete`, (_event: IpcMainInvokeEvent, key: string) =>
     store.delete(key),
   )
-
-  return {
-    store,
-  }
 }
