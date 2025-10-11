@@ -1,7 +1,7 @@
 {
   "name": "@fiahfy/electron-storage",
   "description": "Helper for using electron-store as storage.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": {
     "name": "fiahfy",
     "email": "d.fiahfy@gmail.com",
