@@ -2,7 +2,7 @@
 
 [![Publish](https://github.com/fiahfy/electron-storage/actions/workflows/publish.yml/badge.svg)](https://github.com/fiahfy/electron-storage/actions/workflows/publish.yml)
 
-> A helper library for managing application storage in Electron.
+> A helper library for managing application storage in Electron applications.
 
 ## Installation
 

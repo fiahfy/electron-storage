@@ -1,6 +1,6 @@
 {
   "name": "@fiahfy/electron-storage",
-  "description": "A helper library for managing application storage in Electron.",
+  "description": "A helper library for managing application storage in Electron applications.",
   "version": "0.0.3",
   "author": {
     "name": "fiahfy",
